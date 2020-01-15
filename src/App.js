@@ -72,11 +72,25 @@ class App extends React.Component {
   render() {
     let form;
     if (this.state.currentForm === 0) {
-      form = <AmountForm handleChange={this.handleChange} handleNext={this.handleNext}></AmountForm>
+      form = <AmountForm
+                handleChange={this.handleChange}
+                handleNext={this.handleNext}
+              >
+              </AmountForm>
     } else if (this.state.currentForm === 1) {
-      form = <InfoForm handleChange={this.handleChange} handleNext={this.handleNext}></InfoForm>
+      form = <InfoForm
+                handleChange={this.handleChange}
+                handleNext={this.handleNext}
+              >
+              </InfoForm>
     } else if (this.state.currentForm === 2) {
-      form = <CardForm stripe={this.state.stripe} elements={this.state.elements} handleChange={this.handleChange} handleNext={this.handleNext}></CardForm>
+      form = <CardForm
+                stripe={this.state.stripe}
+                elements={this.state.elements}
+                handleChange={this.handleChange}
+                handleNext={this.handleNext}
+              >
+              </CardForm>
     }
 
     return (
